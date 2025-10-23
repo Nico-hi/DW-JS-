@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ejer2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="style.css">
+    <!---->
+    <script defer src='main.js'></script>
+</head>
+
+<body>
+    <form>
+
+        <p>-------------------------------ejercicio 1 ----------------------------------</p>
+        <label for="nombre_">Nombre:</label>
+        <input type="text" name="nombre" id="nombre_">
+        <input type="button" value="Enviar" onclick="saludar()">
+        <h1 id="salida"></h1>
+        <!--
+            
+        <label for="otro">Nombre:</label>
+        <input type="text" name="otro" id="otro">
+        <input type="button" value="Enviar" id="boton">
+        <h1 id="salida1"></h1>
+        -->
+    </form>
+    <form>
+
+        <p>-------------------------------ejercicio 2 ----------------------------------</p>
+
+        <input type="text" name="first_num" id="first_num" placeholder="numero 1">
+        <input type="button" value="+" onclick="sumar()">
+        <input type="text" name="second_num" id="second_num" placeholder="numero 2">
+        <h1 id="salida2"></h1>
+    </form>
+    <form>
+
+        <p>--------------------------------ejercicio 3 ---------------------------------</p>
+
+        <input type="button" value="dado 0-6" onclick="randomNum()">
+        <h1 id="salida3.0"></h1>
+        <input type="button" value="letra A-Z" onclick="randomLet()">
+        <h1 id="salida3.1"></h1>
+    </form>
+    <form>
+
+        <p>--------------------------------ejercicio 4 ---------------------------------</p>
+        <input type="text" name="place1" id="place1">
+        <input type="button" value="&lt;&lt;" onclick="change_place()">
+        <input type="button" value="&gt;&gt;" onclick="change_place()">
+        <input type="text" name="place2" id="place2">
+    </form>
+    <form>
+
+        <p>---------------------------------ejercicio 5 -------------------------------</p>
+
+        <div>
+            <section id="buttons">
+                <input type="button" value="first num" name="num1" class="slot1" onclick="randomSum(this.className)">
+                <input type="button" value="second num" name="num2" class="slot2" onclick="randomSum(this.className)">
+                <input type="button" value="thirht num" name="num3" class="slot3" onclick="randomSum(this.className)">
+            </section>
+            <section id="addition">
+                <p id="slot1">0</p>
+                <p>+</p>
+                <p id="slot2">0</p>
+                <p>+</p>
+                <p id="slot3">0</p>
+                <p>=</p>
+                <p id="slot4">0</p>
+            </section>
+        </div>
+    </form>
+    <form>
+
+        <p>---------------------------------ejercicio 6 --------------------------------</p>
+
+        <div>
+            <section id="buttons">
+                <input type="button" value="red" name="num1" class="color1" onclick="randomColor(this.className)">
+                <input type="button" value="green" name="num2" class="color2" onclick="randomColor(this.className)">
+                <input type="button" value="blue" name="num3" class="color3" onclick="randomColor(this.className)">
+            </section>
+            <section id="color">
+                <h3>&#40;</h3>
+                <p id="color1">0</p>
+                <p>;</p>
+                <p id="color2">0</p>
+                <p>;</p>
+                <p id="color3">0</p>
+                <h3>&#41;</h3>
+                <div id="color4" ></div>
+            </section>
+        </div>
+
+    </form>
+    <form>
+
+        <p>---------------------------------ejercicio 7 --------------------------------</p>
+    </form>
+</body>
+
+</html>

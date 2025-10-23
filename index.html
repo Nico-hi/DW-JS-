@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-escale='1'">
+    <meta name="autor" content="nicolas pezo">
+
+    <title>Title</title>
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <script defer src="js/index.js"></script>
+    <!-- defer es para que no se cargue hasta que toda la pagina este cargada por completo-->
+</head>
+
+<body>
+    <h1 id="H1">Una pagina web sencilla xD</h1>
+    <h1 style="color: red; border: 10px dodgerblue dotted; ">otra cabecera ...</h1>
+    <p id="parrafo">no me se que curso es pero iniciaremos hacienco un html</p>
+    <h2>Hola Mundo!!</h2>
+    <p class="verde" id="red">este sera un parrafo verde</p>
+    <script>
+        document.write("hola mundo hecho desde JS con el <b>document.write('...')</b>");
+        document.getElementById("H1").style.fontFamily = 'cursive';
+        // se puede poner como en el ejemplo de index.js 
+    </script>
+    <!-- la parte de script solo funcionara con las etiquetas creadas antes de la etiqueta script... 
+        si se pone al antes no se tomara en cuenta -->
+    <h2 id="H2">Cabecera numero 2</h2>
+    <script>
+        let nombre = prompt("hola, como te llamas?");
+        alert("hola " + nombre + " bienvenido a mi pagina web");
+        confirm("deseas continuar?");
+        let edad = prompt("cual es tu edad?");
+    </script>
+
+</body>
+
+</html>

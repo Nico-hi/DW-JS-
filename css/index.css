@@ -1,0 +1,28 @@
+/*la especificidad... de mayor a menor prioridad
+
+niveles de especificidad
+    1000      100           10                          1
+!important >> ID >> CLASS y PSEUDO CLASSES>> ELEMENT y PSEUDO ELEMENTS
+
+
+si queremos que algo sea primordial hay que poner " !important "
+*/
+div p {}
+body p {
+
+}
+
+h1{
+    color: blue;
+}
+
+p{
+    font-size: 20px;
+    color: rgb(0, 76, 255)!important;
+}
+#red{
+    color: red;
+}
+.verde{
+    color: green;
+}

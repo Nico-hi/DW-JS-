@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+    
+    <p>1. Crea un array denominado de 50 elementos inicializados todos a false y utiliza el bucle for(;;) para mostrar sus elementos.</p>
+    <p id="salida1"></p>
+    <script>
+        let array=[];
+        let length_array=50;
+        let salida1="";
+        for (let i = 0; i < length_array; i++) {
+            array[i]=false;
+            salida1+=array[i]+" || ";
+        }
+        
+        document.getElementById("salida1").innerHTML=salida1;
+    </script>
+
+<h6>===================================================================================================</h6>
+<p>2. Modifica cada uno de los elementos del array anterior, de manera que almacenen su posición en el array elevada al cubo ( índice3 ), por ejemplo; <br>document.write(`${arr[0]}, ${arr[2]}, ${arr[7]}, ${arr[11]}`);  // 0, 8, 343, 1331</p>
+<p id="salida2"></p>
+<script>
+
+let array2=[];
+let length_cubos=5;
+let salida2="";
+
+for (let j = 0; j < length_cubos; j++) {
+    array2[j]=j;
+    salida2 += Math.pow(array2[j],2)+" ; "
+}
+
+document.getElementById("salida2").innerHTML=salida2;
+</script>
+<h6>===================================================================================================</h6>
+
+<p>3. Crea un array con los días de la semana, y utiliza el bucle for(;;) para mostrar sus elementos.</p>
+<p id="salida3"></p>
+<script>
+let diasSemana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+let salida3="";
+for (let k = 0; k < diasSemana.length; k++) {
+    salida3 += diasSemana[k]+" || ";
+}
+document.getElementById("salida3").innerHTML=salida3;
+
+</script>
+<h6>===================================================================================================</h6>
+
+<p>4. Crea un array con los días de la semana, y utiliza el bucle for(in) para mostrar sus elementos.</p>
+<p id="salida4"></p>
+<script>
+    let salida4="";
+    for (let dias in diasSemana) {
+        salida4+= dias +"; " + diasSemana[dias] +" || ";
+        }
+document.getElementById("salida4").innerHTML=salida4;
+
+</script>
+<h6>===================================================================================================</h6>
+
+<p>5. Crea un array con los días de la semana, y utiliza el bucle for(of) para mostrar sus elementos.</p>
+<p id="salida5"></p>
+<script>
+let salida5="";
+for (let diass of diasSemana) {
+    salida5+=diass+" || ";
+}
+document.getElementById("salida5").innerHTML=salida5;
+
+</script>
+<h6>===================================================================================================</h6>
+
+<p>6. Dale la vuelta al array <br>
+     ejemplo de ejecución <br>
+
+const semana = [ "lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo" ]; <br>
+document.write(semana, "<br>");  // lunes,martes,miércoles,jueves,viernes,sábado,domingo <br>
+   ... /* proceso */ ...<br>document.write(semana);  // domingo,sábado,viernes,jueves,miércoles,martes,lunes</p>
+
+   <p id="salida6"></p>
+<script>
+    let salida6="";
+    diasSemana.reverse().forEach(diasss => {
+        salida6+=diasss+" || ";
+        
+    });
+    diasSemana
+document.getElementById("salida6").innerHTML=salida6;
+
+</script>
+
+<h6>===================================================================================================</h6>
+
+   <p>7. Crea un array bidimensional que almacene la tabla de multiplicar hasta un número que introducirás desde un cuadro de texto. <br>
+Por ejemplo, si le pido crear la tabla de multiplicar de los 12 primeros números debe crearse el array: <br>
+
+let a = [ [1,   2,  3, 4, 5, 6, 7, 8, 9, 12 ,11 , 12],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2,   4,  6, .........................................],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3,   6,  9, .........................................],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4,   8, 12, .........................................],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[5,  10, 15, .........................................],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[6,  12, 18, .........................................],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[7,  14, 21, .........................................],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[8,  16, 24, .........................................],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[9,  18, 27, .........................................],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[10, 20, 30, .........................................],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[11, 22, 33, .........................................],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[12, 24, 36, .....................................,144]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ];</p>
+
+<label for="rango_max"> ingresa el rango maximo de la tabla ...</label>
+<input type="text" name="rango_max" id="rango_max">
+<div id="salida7" ></div>
+
+
+<script>
+    let rango_max=document.getElementById("rango_max");
+    rango_max.addEventListener("change",function(){
+        let salida7 = ""
+        let rango = parseInt(rango_max.value) +1;
+        salida7+="<table border='1' cellspacing='0' cellpadding='5'>"
+
+        for (let m = 1; m < rango; m++) {
+            salida7+="<tr><td>"+(m)+"</td>";
+            for (let n = 2; n < rango ;n++) {
+                salida7 += "<td>"+(n*m)+"</td>";
+                
+            }
+            salida7+="</tr>";
+            
+        }
+        salida7+="</table>";
+
+
+        console.log(salida7)
+        document.getElementById("salida7").innerHTML=salida7;    
+    })
+
+
+
+</script>
+<h6>===================================================================================================</h6>
+
+</body>
+</html>

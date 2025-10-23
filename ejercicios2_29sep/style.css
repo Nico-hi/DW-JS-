@@ -1,0 +1,166 @@
+/* 1. Estilos Globales y Reset Básico */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa; /* Fondo muy claro */
+    color: #343a40; /* Texto oscuro para buena lectura */
+    margin: 0;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column; /* Apila todos los elementos (los <form>) verticalmente */
+    align-items: center; /* Centra los formularios en la página */
+}
+
+/* Títulos y Separadores de Ejercicios */
+p {
+    color: #495057;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+/* 2. Estilos para los Contenedores de Formulario */
+form {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px; /* Limita el ancho máximo para evitar que se extienda demasiado */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los contenidos a la izquierda dentro del form */
+}
+
+/* 3. Estilos de Inputs y Botones */
+input[type="text"] {
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box; /* Incluye padding en el ancho */
+}
+
+input[type="button"] {
+    background-color: #007bff; /* Azul primario */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.2s;
+    flex-shrink: 0; /* Evita que los botones se encojan en Flexbox */
+}
+
+input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+/* 4. Estilos de Salida (h1) */
+h1 {
+    font-size: 1.1em;
+    font-weight: normal;
+    min-height: 20px; /* Evita colapso cuando está vacío */
+    padding: 10px;
+    margin-top: 15px;
+    width: 100%;
+    background-color: rgb(233, 236, 239); /* Fondo gris claro */
+    border-left: 5px solid #007bff; /* Barra de color a la izquierda */
+    border-radius: 0 5px 5px 0;
+    box-sizing: border-box;
+}
+
+/* 5. Diseño Específico para Ejercicios */
+
+/* Ejercicio 2 y 4: Campos en línea con botones */
+form:nth-child(2) > *, form:nth-child(4) > * {
+    display: inline-block; /* Permite que los elementos fluyan uno al lado del otro */
+    margin-right: 5px;
+}
+
+/* Ajuste para los inputs de texto en Ejercicio 2 y 4 */
+form:nth-child(2) input[type="text"], 
+form:nth-child(4) input[type="text"] {
+    width: 35%; /* Ocupa menos espacio para dejar sitio a los botones */
+}
+
+/* Ejercicio 5: Estructura de botones y suma */
+#buttons, #addition {
+    display: flex;
+    gap: 10px; /* Espacio entre los elementos */
+    margin-bottom: 15px;
+    align-items: center;
+    width: 100%;
+}
+
+#addition p {
+    font-weight: bold;
+    color: #28a745;
+    margin: 0;
+    padding: 5px;
+    border: 1px dashed #28a745;
+    border-radius: 3px;
+    flex-grow: 1; /* Distribuye el espacio entre los p */
+    text-align: center;
+}
+
+#addition p:nth-child(even) {
+    color: #495057; /* Símbolos + y = */
+    border: none;
+    flex-grow: 0;
+}
+/* ... (MANTENER TODO EL CSS ANTERIOR) ... */
+
+/* 5. Estilos para Ejercicio 6 (RGB) */
+/* Alinea los botones de color */
+form:nth-child(6) #buttons {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+form:nth-child(6) #buttons input[type="button"] {
+    flex-grow: 1;
+}
+
+/* Alinea los valores RGB y el cuadro de color */
+#color {
+    display: flex;
+    gap: 5px; /* Espacio mínimo entre los elementos */
+    align-items: center;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#color h3, 
+#color p {
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0; /* Evita que los paréntesis o números se deformen */
+}
+
+/* Estilo para los números (RGB values) */
+#color p {
+    padding: 4px 8px;
+    width: fit-content;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+/* Estilo para el cuadro de color */
+#color div#color4 {
+    /* CORRECCIÓN: Definimos el tamaño aquí y quitamos el inline style del HTML */
+    width: 150px; 
+    height: 60px; /* Le damos altura para que se vea */
+    border: 3px solid #333; /* Un borde más grueso */
+    margin-left: 20px;
+    border-radius: 6px;
+    flex-shrink: 0; /* Asegura que no pierda su tamaño */
+    transition: background-color 0.5s; /* Animación de cambio de color */
+}
