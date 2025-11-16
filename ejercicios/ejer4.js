@@ -30,16 +30,16 @@ while (fechainicio <= fechafin) {
 resultado4.innerHTML += `<br>Los milisegundos desde el inicio (1970) son: ${Date.now()}`;
 
 // Mostrar diferencia en milisegundos entre fechas con ajuste de zona horaria
-let diferenciaMS = fechafin - (fechafin.getTimezoneOffset() * 60000);
+let diferenciaMS = fechafin - (fechafin.getTimezoneOffset() * 60000); // Ajuste de zona horaria al multiplicar por 60000 (ms en un minuto)
 resultado4.innerHTML += `<br>Las fechas restadas son: ${diferenciaMS} ms.`;
 
 // Cálculo del tiempo restante hasta fin de año
 let fechaFinAnio = new Date(anio, 11, 31, 23, 59, 59, 999);
 let fechaRestante = fechaFinAnio - Date.now();
 
-let dias = Math.floor(fechaRestante / (1000 * 60 * 60 * 24));
-let horas = Math.floor((fechaRestante / (1000 * 60 * 60)) % 24);
-let minutos = Math.floor((fechaRestante / (1000 * 60)) % 60);
+let dias = Math.floor(fechaRestante / (1000 * 60 * 60 * 24)); // ms en un día = 1000*60*60*24
+let horas = Math.floor((fechaRestante / (1000 * 60 * 60)) % 24);// el % 24 para obtener las horas restantes después de contar los días
+let minutos = Math.floor((fechaRestante / (1000 * 60)) % 60);// el % 60 para obtener los minutos restantes después de contar las horas
 resultado4.innerHTML += `<br>Quedan ${dias} días, ${horas} horas y ${minutos} minutos para fin de año.`;
 
 // Cálculo de edad en distintas unidades
